@@ -1,0 +1,9 @@
+{:source-paths ["src"]
+
+ :builds
+ {:foo
+  {:target :node-library
+   :release {:output-to "out/foo.js"
+             :build-hooks [(shadow.cljs.build-report/hook
+                            {:output-to "out/report.html"})]}
+   :exports-var foo/exports}}}
