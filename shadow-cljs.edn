@@ -4,6 +4,8 @@
  {:foo
   {:target :node-library
    :output-to "out/foo.js"
+   ;; This fixes it:
+   ;; :output-dir "out"
    :build-hooks [(shadow.cljs.build-report/hook
                   {:output-to "out/report.html"})]
    :exports-var foo/exports}}}
